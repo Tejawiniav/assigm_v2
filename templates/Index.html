@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<Head>
+<title>index</title>
+<style>
+h2{color:Red;font-size:20px}
+h3{color:Red;font-size:20px}
+h4{color:Red;font-size:20px}
+label{color:blue}
+</style>
+</head>
+<body>
+<div class="login">
+<h1>Data Scientist Application v2.0</h1><br>
+ <form action="{{ url_for('predict')}}"method="post">
+<h2> Basic information</h2><br> 
+<input type="text" name="Current City" placeholder="Current City" required="required" /><br>
+<input type="text" name="Performance_PG" placeholder="Performance_PG" required="required" /><br>
+<input type="text" name="Performance_UG" placeholder="Performance_UG" required="required" /><br>
+<input type="text" name="Performance_12" placeholder="Performance_12" required="required" /><br>
+<input type="text" name="Performance_10" placeholder="Performance_10" required="required" /><br>
+<input type="text" name="Current Year Of Graduation" placeholder="Current Year Of Graduation" required="required" /><br>
+<h3> Primary Skills Self Rating</h2><br>
+<input type="Number" name="Python (out of 3)" placeholder="Python (out of 3)" required="required" /><br>
+<input type="Number" name="R Programming (out of 3)" placeholder="R Programming (out of 3)" required="required" /><br>
+<input type="Number" name="Data Science (out of 3)" placeholder="Data Science (out of 3)" required="required" /><br>
+<h4> Additional Skills</h4><br> 
+<input type="text" name="Other skills" placeholder="Other skills" required="required" /><br>
+ <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+ <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+</body>
+</html>
