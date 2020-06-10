@@ -25,7 +25,7 @@ def predict():
 
     
 
-    return render_template('index.html', prediction_text='Sales should be $ {}'.format(prediction))
+    return render_template('index.html', prediction_text='Sudent selection  should be $ {}'.format(prediction))
 
 
 if __name__ == "__main__":
